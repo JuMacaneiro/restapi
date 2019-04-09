@@ -1,0 +1,89 @@
+ <ion-content center text-center >
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>             
+        <ion-card>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/pizza.png"/>
+            </ion-avatar>
+            <p class="cardapio">Cardápio</p>
+            <input  value="sair" class="sair" type="image" src="../../assets/imgs/sair.png"  name="sair ">
+          </ion-item>
+          <div padding >
+            <ion-segment [(ngModel)]="sabores">
+              <ion-segment-button  *ngFor="let tamanho of tamanhos">
+                Pequenas
+              </ion-segment-button>
+            
+            </ion-segment>
+          </div>
+          <img src="../../assets/imgs/pizzahut1.jpg">   
+
+          <div [ngSwitch]="sabores" class="padding">          
+            <ion-list *ngSwitchCase="'salgadas'" >
+              <ion-item >           
+                <img class= "thumbnail" src="../../assets/imgs/pizza1.png"/>
+              <p class="texto">
+                  Mussarela, calabresa, cebola e azeitona.</p>
+                <ion-segment-button value="calabresa">
+                  <p class="rotulo"> Calabresa</p>
+                  </ion-segment-button>
+              </ion-item>
+            
+              <ion-item>           
+                <img class= "thumbnail" src="../../assets/imgs/pizza1.png"/>
+                  <p class="texto"> 
+                    Mussarela, queijo cheddar, cebola e mostarda. 
+                  </p>
+                <ion-segment-button value="quatro-queijos"> 
+                    <p class="rotulo">  
+                      Quatro Queijo
+                    </p>   
+                </ion-segment-button>    
+              </ion-item> 
+              <ion-item>           
+                <img class= "thumbnail" src="../../assets/imgs/pizza1.png"/>
+                  <p class="texto"> 
+                    Bacon, mussarela, cebola e mostarda. 
+                  </p>
+                <ion-segment-button value="bacon"> 
+                    <p class="rotulo">  
+                      Bacon
+                    </p>   
+                </ion-segment-button>    
+              </ion-item> 
+              <ion-item>           
+                <img class= "thumbnail" src="../../assets/imgs/pizza1.png"/>
+                  <p class="texto"> 
+                    Brócolis, mussarela, cebola e mostarda. 
+                  </p>
+                <ion-segment-button value="brocolis"> 
+                    <p class="rotulo">  
+                      Brócolis
+                    </p>   
+                </ion-segment-button>    
+              </ion-item> 
+              <ion-item class="pizzaTamanho">
+                <p>Escolha o Tamanho da sua pizza</p>
+                  <input name="tamanho " value="media" class="pizzaTamanho1"  type="image" src="../../assets/imgs/pizzaIcon.png"  name="Tamanho da Pizza Média ">
+                  <input name="tamanho " value="grande" class="pizzaTamanho2"  type="image" src="../../assets/imgs/pizzaIcon.png"  name="Tamanho da Pizza Frande Extra Grande ">
+                  <input name="tamanho " value="extraGrande" class="pizzaTamanho3"  type="image" src="../../assets/imgs/pizzaIcon.png"  name="Tamanho da Pizza ">
+              </ion-item>     
+            </ion-list>        
+              <ion-list *ngSwitchCase="'doces'">
+                <ion-item class="doce">           
+                  <img class= "thumbnail" src="../../assets/imgs/pizzaChocolate.jpg"/>
+                  <p class="texto">
+                    Calda de Chocolate com uma camada generosa de brigadeiro e granulado</p>
+                    <ion-segment-button value="chocolate">
+                      <p class="rotulo"> Chocolate</p>
+                    </ion-segment-button>
+                  </ion-item>            
+              </ion-list>
+            </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+</ion-content> -->

@@ -1,0 +1,44 @@
+<ion-content center text-center >
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>             
+          <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/pizza.png"/>
+              </ion-avatar>
+              <p class="cardapio">Cardápio</p>
+              <input  value="sair" class="sair" type="image" src="../../assets/imgs/sair.png"  name="sair ">
+            </ion-item>
+            <div padding >
+              <ion-segment >
+                <ion-segment-button *ngFor="let tamanho of tamanhos" (click)="saboresGet(tamanho.id, tamanho.quantidade_sabores)">
+                  {{tamanho.name}} ({{tamanho.quantidade_sabores}})
+                
+                </ion-segment-button>
+              
+              </ion-segment>
+            </div>
+            <img src="../../assets/imgs/pizzahut1.jpg">   
+  
+            <div class="padding">          
+              <ion-list >
+                <ion-item *ngFor="let sabor of sabores">           
+                  <img class= "thumbnail" src="../../assets/imgs/pizza1.png"/>                 
+                <p class="texto">
+                    {{sabor.sabor}}
+                   </p>
+                  <ion-segment-button >
+
+                    <ion-checkbox (click)="choose(sabor)" [(ngModel)]="sabor.checked"></ion-checkbox>
+                    <p class="rotulo">R$ {{sabor.preco}},00</p>
+                    </ion-segment-button>
+                </ion-item> 
+                                 
+            </ion-list>        
+        </div>
+      </ion-card>
+    </ion-col>
+  </ion-row>  
+</ion-grid>
+</ion-content> 
